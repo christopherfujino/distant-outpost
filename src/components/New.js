@@ -6,7 +6,7 @@ class New extends Component {
     return (
       <main className="col-md-8 offset-md-2">
         <form>
-          <div class="form-group">
+          <div className="form-group">
             <label>new game suckahz!</label>
           </div>
           <Link to="/game" className="btn btn-primary">start</Link>
