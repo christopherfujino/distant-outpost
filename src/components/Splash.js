@@ -8,7 +8,7 @@ class Splash extends Component {
         <div className="jumbotron">
           <h1>the future begins today</h1>
           <p>
-            <Link className="btn btn-primary" to="/game/new">start a journey...</Link>
+            <Link className="btn btn-primary" to="/new">start a journey...</Link>
           </p>
         </div>
       </main>

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Splash from './components/Splash';
 import New from './components/New';
+import Hud from './components/Hud';
 import Main from './components/Main';
 import gameInterface from './gameInterface';
-//import logo from './logo.svg';
-//import './App.css';
+import Game from './Game';
 
 class App extends Component {
   constructor (props) {
@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       interface: gameInterface(this),
       tagline: "the future of the human race",
-      time: 0
+      time: 0,
+      game: new Game()
     }
   }
   render () {
@@ -27,9 +28,12 @@ class App extends Component {
           <div className="container">
             <div className="row">
               <Route exact path="/" component={Splash} />
-              <Route path="/game/new" component={New} />
+              <Route path="/new" component={New} />
+              <Route path="/game" render={props => {
+                return <Hud interface={this.state.interface} />
+              }} />
               <Route exact path="/game" render={props => {
-                return <Main interface={this.state.interface} />;
+                return <Main interface={this.state.interface} />
               }} />
             </div>
           </div>

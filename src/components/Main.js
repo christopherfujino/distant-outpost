@@ -7,7 +7,7 @@ class Main extends Component {
   }
   render () {
     return (
-      <main className="col-md-8 offset-md-2">
+      <main className="col-md-8">
         <h1>play da gamez!</h1>
       </main>
     )
